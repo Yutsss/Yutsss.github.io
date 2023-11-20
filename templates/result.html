@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Recommendation</title>
+  </head>
+  <body>
+    <h1>Recommended Food</h1>
+    {% if recommended_food %}
+    <p>Your recommended food:</p>
+    <ul>
+      {% for food, quantity in recommended_food.items() %}
+      <li>{{ quantity }} {{ food }}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>Sorry, no recommendation available.</p>
+    {% endif %}
+  </body>
+</html>
